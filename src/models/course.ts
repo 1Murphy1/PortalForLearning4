@@ -19,6 +19,7 @@ export interface Course {
   author: Types.ObjectId
   createdAt: Date
   tags?: string[]
+  enrollments: Types.ObjectId[]
 }
 
 const courseSchema = new Schema<Course>({
@@ -71,6 +72,7 @@ const courseSchema = new Schema<Course>({
       type: String,
     },
   ],
+  enrollments: [{ type: Schema.Types.ObjectId, ref: 'User  ' }],
 })
 
 courseSchema.pre('validate', function (next) {
