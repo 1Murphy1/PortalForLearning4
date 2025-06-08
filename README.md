@@ -82,3 +82,30 @@ POST /api/lessons - Создать новый урок
 PUT /api/lessons/:id - Обновить урок по ID 
 
 DELETE /api/lessons/:id - Удалить урок по ID 
+
+### Комментарии 
+
+GET /api/lessons/:lessonId/comments - Получить комментарии к уроку
+
+POST /api/lessons/:lessonId/comments - Создать новый комментарий 
+
+PUT /api/comments/:id - Обновить комментарий
+
+DELETE /api/comments/:id - Удалить комментарий
+
+### Записи на курс
+
+POST /api/enrollments - Записаться на курс
+
+POST /api/enrollments/complete - Завершить урок
+
+POST /api/enrollments/uncomplete - Отменить завершение урока
+
+GET /api/enrollments/:courseId - Получить прогресс по курсу
+
+GET /api/courses/:courseId/enrollments - Получить список записей на курс
+
+
+
+
+
